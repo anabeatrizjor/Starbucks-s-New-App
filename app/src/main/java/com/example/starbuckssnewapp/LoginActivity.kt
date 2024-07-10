@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,8 +21,8 @@ class LoginActivity : AppCompatActivity() {
 
         val emailInput = findViewById<EditText>(R.id.emailInputLogin)
         val passwordInput = findViewById<EditText>(R.id.passwordInputLogin)
-        val newAccBtn = findViewById<Button>(R.id.ButtonCadastro)
-        val loginBtn = findViewById<EditText>(R.id.ButtonCadastro)
+        val newAccBtn = findViewById<Button>(R.id.ButtonCadastroLogin)
+        val loginBtn = findViewById<EditText>(R.id.ButtonLoginLogin)
         val backArrow = findViewById<ImageView>(R.id.backArrowLogin)
 
         newAccBtn.setOnClickListener {
@@ -30,12 +31,25 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
         backArrow.setOnClickListener {
-            val intent = Intent(this@LoginActivity, CadastroActivity::class.java)
+            val intent = Intent(this@LoginActivity, WelcomeScreen::class.java)
             startActivity(intent)
             finish()
         }
+        loginBtn.setOnClickListener {
+            val emailLogin = emailInput.text.toString()
+            val passwordLogin = passwordInput.text.toString()
 
+            if (email == ){
+                Toast.makeText(this@LoginActivity, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
+                val intent = Intent (this@LoginActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            }else{
+                Toast.makeText(this@LoginActivity, "E-mail ou senha incorretos", Toast.LENGTH_SHORT).show()
+            }
 
+        }
 
     }
+
 }

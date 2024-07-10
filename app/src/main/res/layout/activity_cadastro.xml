@@ -45,7 +45,7 @@
         android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/ButtonLogin"
+        android:id="@+id/ButtonLoginCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Criar nova conta"
@@ -57,7 +57,7 @@
         android:backgroundTint="@color/greenVariant"/>
 
     <Button
-        android:id="@+id/ButtonCadastro"
+        android:id="@+id/ButtonCadastroCadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Já tenho uma conta"

@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/offBlack"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
-    android:orientation="horizontal"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/offBlack"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,19 +15,58 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/green"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="650dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints">
 
         <ImageView
             android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:src=""
-            android:layout_margin="16dp"/>
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/menu_image" />
 
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:src="@drawable/home_image" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:src="@drawable/user_image" />
 
     </LinearLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/lexend_deca"
+        android:text="Starbucks"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
