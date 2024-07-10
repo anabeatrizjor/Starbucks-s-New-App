@@ -13,9 +13,8 @@
     <LinearLayout
         android:id="@+id/layoutNav"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:background="@color/green"
-        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,22 +25,18 @@
         <ImageView
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
+
             android:src="@drawable/menu_image" />
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
             android:src="@drawable/home_image" />
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_margin="16dp"
+
             android:src="@drawable/user_image" />
 
     </LinearLayout>
@@ -54,19 +49,19 @@
         android:text="Starbucks"
         android:textColor="@color/white"
         android:textSize="35sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"/>
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="40dp"
         android:layout_marginTop="30dp"
         android:src="@drawable/img"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"/>
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

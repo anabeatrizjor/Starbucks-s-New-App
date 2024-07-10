@@ -12,19 +12,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-data class User (val email:String , val senha:String)
-
 class CadastroActivity : AppCompatActivity() {
+
+    data class User (val email:String , val senha:String)
+
     @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_cadastro)
-
-        companion object {
-
-        }
-        private var listaUser = mutableListOf<User>()
 
         val emailInput = findViewById<EditText>(R.id.emailInputCadastro)
         val passwordInput = findViewById<EditText>(R.id.passwordInputCadastro)
@@ -47,11 +43,18 @@ class CadastroActivity : AppCompatActivity() {
             val passwordCadastro = passwordInput.text.toString()
 
             if (emailCadastro.isNotBlank() && passwordCadastro.isNotBlank()){
-
+                val newUser = User(emailCadastro, passwordCadastro)
+                listaUser.add(newUser)
                 Toast.makeText(this@CadastroActivity, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
-
+            }else{
+                Toast.makeText(this@CadastroActivity, "Algo deu errado", Toast.LENGTH_SHORT).show()
             }
-
+        }
+    }
+    companion object {
+        var listaUser = mutableListOf<User>()
+        fun getUsers(): List<User> {
+            return listaUser
         }
     }
 }

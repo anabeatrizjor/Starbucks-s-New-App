@@ -26,7 +26,7 @@ class SplashScreen : AppCompatActivity() {
         val animView = AnimationUtils.loadAnimation(this, R.anim.fade_in)
 
         Handler().postDelayed({
-            val intent = Intent(this@SplashScreen, MainActivity::class.java)
+            val intent = Intent(this@SplashScreen, WelcomeScreen::class.java)
             startActivity(intent)
             finish()
         }, splashScreenStarted.toLong())

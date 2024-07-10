@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
             val emailLogin = emailInput.text.toString()
             val passwordLogin = passwordInput.text.toString()
 
-            if (email == ){
+            if (CadastroActivity.Companion.listaUser.any { it.email == emailLogin && it.senha == passwordLogin} ) {
                 Toast.makeText(this@LoginActivity, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
                 val intent = Intent (this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)
