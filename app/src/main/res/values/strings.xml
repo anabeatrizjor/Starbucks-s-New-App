@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Starbucks\'s New App</string>
+    <string name="home_page">Home</string>
+    <string name="config_page">Configurações</string>
+    <string name="info_page">Informações</string>
+    <string name="menuDoces_page">Bakery</string>
+    <string name="menuCoffee_page">Coffee</string>
 </resources>

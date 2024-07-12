@@ -8,7 +8,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greenDark"
-    tools:context=".LoginActivity">
+    android:theme="@style/Base.Theme.StarbuckssNewApp"
+    tools:context=".CadastroActivity">
 
     <TextView
         android:id="@+id/tituloCadastro"
@@ -28,6 +29,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/white"
         android:fontFamily="@font/lexend_deca"
         android:textColor="@color/white" />
@@ -40,6 +42,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
+        android:inputType="textPassword"
         android:textColorHint="@color/white"
         android:fontFamily="@font/lexend_deca"
         android:textColor="@color/white" />

@@ -9,8 +9,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class LoginActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId", "WrongViewCast")
@@ -22,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.emailInputLogin)
         val passwordInput = findViewById<EditText>(R.id.passwordInputLogin)
         val newAccBtn = findViewById<Button>(R.id.ButtonCadastroLogin)
-        val loginBtn = findViewById<EditText>(R.id.ButtonLoginLogin)
+        val loginBtn = findViewById<Button>(R.id.ButtonLoginLogin)
         val backArrow = findViewById<ImageView>(R.id.backArrowLogin)
 
         newAccBtn.setOnClickListener {
@@ -39,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
             val emailLogin = emailInput.text.toString()
             val passwordLogin = passwordInput.text.toString()
 
-            if (CadastroActivity.Companion.listaUser.any { it.email == emailLogin && it.senha == passwordLogin} ) {
+            if (CadastroActivity.Companion.listaUser.any { it.email == emailLogin && it.senha == passwordLogin } ) {
                 Toast.makeText(this@LoginActivity, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
                 val intent = Intent (this@LoginActivity, MainActivity::class.java)
                 startActivity(intent)

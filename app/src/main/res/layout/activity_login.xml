@@ -8,6 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/greenDark"
+    android:theme="@style/Base.Theme.StarbuckssNewApp"
     tools:context=".LoginActivity">
 
     <TextView
@@ -28,6 +29,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"
+        android:inputType="textEmailAddress"
         android:textColorHint="@color/white"
         android:fontFamily="@font/lexend_deca"
         android:textColor="@color/white" />
@@ -37,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Digite sua senha"
+        android:inputType="textPassword"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:padding="10dp"

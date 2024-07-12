@@ -5,6 +5,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     android:layout_gravity="center"
+    android:theme="@style/Base.Theme.StarbuckssNewApp"
     android:layout_height="match_parent">
 
     <ImageView
@@ -19,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.1"/>
 
     <Button
-        android:id="@+id/ButtonCriar"
+        android:id="@+id/ButtonLogar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Login"
@@ -30,7 +31,7 @@
         android:backgroundTint="@color/greenVariant"/>
 
     <Button
-        android:id="@+id/ButtonLogar"
+        android:id="@+id/ButtonCriar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Criar uma conta"

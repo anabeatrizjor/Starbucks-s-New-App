@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="@string/home_page"
+            android:icon="@drawable/home_image"
+            android:id="@+id/homeOnMenu"/>
+
+        <item
+            android:title="@string/config_page"
+            android:icon="@drawable/settings_img"
+            android:id="@+id/settingsOnMenu"/>
+
+        <item
+            android:title="@string/info_page"
+            android:icon="@drawable/info_img"
+            android:id="@+id/infoOnMenu"/>
+
+        <item
+            android:title="@string/menuDoces_page"
+            android:icon="@drawable/bakery_img"
+            android:id="@+id/bakeryOnMenu"/>
+
+        <item
+            android:title="@string/menuCoffee_page"
+            android:icon="@drawable/coffee_img"
+            android:id="@+id/coffeeOnMenu"/>
+
+    </group>
+
 
 
 

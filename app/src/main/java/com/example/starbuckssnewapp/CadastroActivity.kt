@@ -25,11 +25,11 @@ class CadastroActivity : AppCompatActivity() {
         val emailInput = findViewById<EditText>(R.id.emailInputCadastro)
         val passwordInput = findViewById<EditText>(R.id.passwordInputCadastro)
         val cadastroBtn = findViewById<Button>(R.id.ButtonCadastroCadastro)
-        val loginBtn = findViewById<EditText>(R.id.ButtonCadastroCadastro)
+        val loginBtn = findViewById<Button>(R.id.ButtonLoginCadastro)
         val backArrow = findViewById<ImageView>(R.id.backArrowCadastro)
 
         loginBtn.setOnClickListener {
-            val intent = Intent(this@CadastroActivity, CadastroActivity::class.java)
+            val intent = Intent(this@CadastroActivity,LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -51,6 +51,7 @@ class CadastroActivity : AppCompatActivity() {
             }
         }
     }
+
     companion object {
         var listaUser = mutableListOf<User>()
         fun getUsers(): List<User> {
