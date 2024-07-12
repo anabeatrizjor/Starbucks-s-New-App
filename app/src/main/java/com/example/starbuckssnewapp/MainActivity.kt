@@ -1,5 +1,6 @@
 package com.example.starbuckssnewapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -28,6 +29,14 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             menuItem.isChecked = true
             drawerLayout.closeDrawers()
+
+            when (menuItem.itemId) {
+                R.id.settingsOnMenu -> {
+                    val intent = Intent (this@MainActivity, SettingsMenuOption::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }
             true
         }
     }

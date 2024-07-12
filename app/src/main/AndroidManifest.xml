@@ -13,6 +13,9 @@
         android:theme="@style/Theme.StarbuckssNewApp"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsMenuOption"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity

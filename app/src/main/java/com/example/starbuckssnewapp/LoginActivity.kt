@@ -34,20 +34,18 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
         loginBtn.setOnClickListener {
-            val emailLogin = emailInput.text.toString()
-            val passwordLogin = passwordInput.text.toString()
+            // val emailLogin = emailInput.text.toString()
+            // val passwordLogin = passwordInput.text.toString()
 
-            if (CadastroActivity.Companion.listaUser.any { it.email == emailLogin && it.senha == passwordLogin } ) {
-                Toast.makeText(this@LoginActivity, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
-                val intent = Intent (this@LoginActivity, MainActivity::class.java)
-                startActivity(intent)
-                finish()
-            }else{
-                Toast.makeText(this@LoginActivity, "E-mail ou senha incorretos", Toast.LENGTH_SHORT).show()
-            }
+            //if (CadastroActivity.Companion.listaUser.any { it.email == emailLogin && it.senha == passwordLogin } ) {
+            //   Toast.makeText(this@LoginActivity, "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+            //}else{
+            //  Toast.makeText(this@LoginActivity, "E-mail ou senha incorretos", Toast.LENGTH_SHORT).show()
+        }
 
         }
 
     }
-
-}

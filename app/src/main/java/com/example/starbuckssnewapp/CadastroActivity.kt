@@ -3,6 +3,7 @@ package com.example.starbuckssnewapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -45,9 +46,13 @@ class CadastroActivity : AppCompatActivity() {
             if (emailCadastro.isNotBlank() && passwordCadastro.isNotBlank()){
                 val newUser = User(emailCadastro, passwordCadastro)
                 listaUser.add(newUser)
+
+                // Log para verificar os usuários adicionados
+                Log.d("CadastroActivity", "Usuário cadastrado: $newUser")
+
                 Toast.makeText(this@CadastroActivity, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
-            }else{
-                Toast.makeText(this@CadastroActivity, "Algo deu errado", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@CadastroActivity, "Preencha todos os campos", Toast.LENGTH_SHORT).show()
             }
         }
     }
